@@ -32,6 +32,10 @@
 
 from typing import Dict
 
+class Shake(TypedDict):
+    price: int
+    flavour: str
+
 budget = 20.0  
 
 Menu = Dict[str, tuple[int, str]] # type alias - capitalised to show not a variable
@@ -40,11 +44,11 @@ Menu = Dict[str, tuple[int, str]] # type alias - capitalised to show not a varia
                                   # a static code analysis pipeline
                                   # updates to the structure propagate through all updates.
 
-milkshakes = {
-    "1": (3, "Strawberry"),
-    "2": (4, "Chocolate"),
-    "3": (5, "Vanilla")
-} 
+milkshakes : Dict[str, Shake] = { 
+    "1": ("price": 3, "flavour": "Strawberry"),
+    "2": ("price": 4, "flavour": "Chocolate"),
+    "3": ("price": 5, "flavour": "Vanilla")
+ } 
 
 while True:
     print("Drinks Menu:")
