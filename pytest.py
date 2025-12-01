@@ -1,5 +1,5 @@
 print("Hello World!")
 
-username = 'Bob'
-age = 32 
-print(username, 'is' +age+ 'years old.')
+username = input('Enter your name:')
+age = input('Enter your age: ')
+print(username, 'is' ,age, 'years old.')
