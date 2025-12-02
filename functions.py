@@ -112,3 +112,19 @@
 
 # print(list(squared)) 
 
+# higher level functions:
+
+def square(x):
+    return x * x
+
+def apply_func(func, value):
+    return func(value)
+
+print(apply_func(square, 10))
+
+def get_input():
+    return input("Enter something: ")
+
+for item in iter(get_input, "quit"): # iterable / sentinel 
+    print(f"Entered: {item}")
+
